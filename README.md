@@ -55,31 +55,8 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 
 <hr>
+
 ## PROGRAM:
-~~~
-import defaultdict
-from collections import defaultdict
-def dfs(graph,start,visited,path):
-    path.append(start)
-    visited[start]=True
-    for neighbour in graph[start]:
-        if visited[neighbour]==False:
-            dfs(graph,neighbour,visited,path)
-            visited[neighbour]=True
-    return path
-graph=defaultdict(list)
-n,e=map(int,input().split())
-for i in range(e):
-    u,v=map(str,input().split())
-    graph[u].append(v)
-    graph[v].append(u)
-#print(graph)
-start='A'
-visited=defaultdict(bool)
-path=[]
-traversedpath=dfs(graph,start,visited,path)
-print(traversedpath)
-~~~
 ~~~
 import defaultdict
 from collections import defaultdict
@@ -138,6 +115,12 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 <hr>
+
+## OUTPUT:
+![image](https://github.com/SdMdZahi7/19AI405ExpNo2/assets/94187572/c3149235-5ade-40c3-85ad-bcac9460e219)
+![image](https://github.com/SdMdZahi7/19AI405ExpNo2/assets/94187572/29f2ba45-c2a4-49f8-a251-700db888aa3e)
+
+
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
